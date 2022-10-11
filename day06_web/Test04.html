@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则对象</title>
+
+    <script>
+        var reg = new RegExp("^\\w{6,12}$"); //单个字符6-12个
+
+        var reg2 = /^\w{6,12}$/;
+
+        //验证字符串
+        var userName = "zhangsan";
+        var flag = reg2.test(userName);
+        alert(flag);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

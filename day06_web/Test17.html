@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM文档对象</title>
+
+</head>
+<body>
+<a>click me！！</a>
+<input type="button" id="btn_set" value="设置属性">
+<input type="button" id="btn_remove" value="删除属性">
+<script>
+
+    /*
+    * Element：元素对象
+        1. 获取/创建：通过document来获取和创建
+        2. 方法：
+    1. removeAttribute()：删除属性
+    2. setAttribute()：设置属性
+     */
+
+    //获取btn
+    var btn = document.getElementById("btn_set");
+
+    //添加点击事件，添加href
+    btn.onclick = function () {
+
+        var a = document.getElementsByTagName("a")[0]; //通过标签名获取
+        a.setAttribute("href", "http://www.baidu.com");
+
+    }
+
+    var btn_re = document.getElementById("btn_remove");
+    btn_re.onclick = function () {
+
+        var a = document.getElementsByTagName("a")[0];
+        a.removeAttribute("href"); //删除属性
+
+    }
+
+
+</script>
+</body>
+</html>

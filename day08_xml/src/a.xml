@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone = 'no' ?>
+<?xml-stylesheet type='text/css' href="a.css"?>
+<!--        * version：版本号，必须的属性 -->
+<!--        * encoding：编码方式。告知解析引擎当前文档使用的字符集，默认值：ISO-8859-1-->
+<!--        * standalone：是否独立 -->
+<!--                * yes：不依赖其他文件-->
+<!--                * no：依赖其他文件-->
+<users>
+    <user id='1'>
+        <name>张三</name>
+        <age>20</age>
+        <gender>男</gender>
+    </user>
+
+    <user id='2'>
+        <name>李四</name>
+        <age>50</age>
+        <gender>男</gender>
+
+        <code>
+            if(a &lt; b &amp;&amp; a &gt; c){}
+
+        <!--   >转义为&lt;   &amp;&amp;为&&   <转义为&gt;
+        过于麻烦，使用CDATA区，原样展示<![CDATA[]]>    CD快捷键   -->
+
+            <![CDATA[
+              if(a<b && b>c){}
+            ]]>
+
+
+        </code>
+    </user>
+</users>

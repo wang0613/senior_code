@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery实现方式-post方式</title>
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <script>
+        /**
+         *  $.post(url, [data], [callback], [type])
+         * 参数：
+         * url：请求路径
+         * data：请求参数
+         * callback：回调函数
+         * type：响应结果的类
+         */
+        function f() {
+            //post方式实现异步请求
+            $.post("ajaxServlet", {username: "jackMa", age: "男"}, function (data) {
+                alert(data);
+            }, "text");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="f()">
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+</head>
+<body>
+<img id="light" src="img/pic_bulboff.gif" onclick="light2">
+<img id="light2" src="img/pic_bulbon.gif">
+
+<script>
+    /*
+      * document.getElementById("id值"):通过元素的id获取元素对象
+      */
+    var light = document.getElementById("light");
+    alert(light); //null因为是从上往下加载的   [object HTMLImageElement]正常获取
+
+
+</script>
+</body>
+</html>

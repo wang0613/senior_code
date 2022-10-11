@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //1.获取name对象，绑定click事件
+          /*  $("#name").click(function () {
+                alert("click run！！")
+
+            });*/
+
+            //给name绑定鼠标移动事件，绑定鼠标移除事件
+            $("#name").mouseover(function () {
+                alert("鼠标 run！！")
+
+            }).mouseout(function () {
+                alert("鼠标 移除！！")
+
+            });
+
+            $("#name").focus(); //让文本框获得焦点
+
+
+
+        });
+
+    </script>
+</head>
+<body>
+<input id="name" type="text" value="绑定点击事件">
+</body>
+</html>

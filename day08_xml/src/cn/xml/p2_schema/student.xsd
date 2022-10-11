@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns="http://www.itcast.cn/xml"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.itcast.cn/xml" elementFormDefault="qualified">
+
+    <xsd:element name="students" type="studentsType"/>
+    <!--声明元素为students 类型为自定义元素-->
+
+    <xsd:complexType name="studentsType">
+        <xsd:sequence>
+            <!--按顺序出现student -->
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="studentType">
+        <!--student类型 按顺序出现 name字符串 age sex 自定义类型-->
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="ageType" />
+            <xsd:element name="sex" type="sexType" />
+        </xsd:sequence>
+        <!--student属性：必须出现，类型为自定义number类型 -->
+        <xsd:attribute name="number" type="numberType" use="required"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="sexType">
+        <!--性别类型：字符串，性别只能是male或者female -->
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="ageType">
+        <!--年龄的类型是 integer 最小0岁 ，最大256岁-->
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="numberType">
+        <!--规定number的属性必须是字符串,字符串格式为：wang_后面根4位数字-->
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="wang_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema> 

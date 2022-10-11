@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        function showFn() {
+            //显示div: normal正常的速度   也可以直接写毫秒值作为参数
+            // $("#showDiv").show("normal","liner",function () {
+            //     alert("显示完毕！！")
+            //
+            // })
+
+            //滑动显示
+            // $("#showDiv").slideDown("slow");
+
+            //淡入淡出显示
+            $("#showDiv").fadeIn("slow");
+        }
+        function hideFn() {
+            //隐藏div: slow慢速
+            // $("#showDiv").hide("slow","swing",function () {
+            //     alert("隐藏完毕！！");
+            //
+            // });
+
+            //滑动隐藏
+            // $("#showDiv").slideUp("slow","swing");
+
+            //淡入淡出显示
+            $("#showDiv").fadeOut("slow");
+        }
+
+        function toggleFn() {
+            //切换div
+            // $("#showDiv").toggle("slow","swing");
+
+            //滑动切换
+            // $("#showDiv").slideToggle("slow");
+
+            //淡入淡出显示
+            $("#showDiv").fadeToggle("slow");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="点击按钮隐藏div" onclick="hideFn()">
+<input type="button" value="点击按钮显示div" onclick="showFn()">
+<input type="button" value="点击按钮切换div显示和隐藏" onclick="toggleFn()">
+
+<div id="showDiv" style="width:300px;height:300px;background:pink">
+    div显示和隐藏
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //使用on绑定单击事件
+            $("#btn").on("click",function () {
+                alert("click run！！！")
+
+            });
+
+            //使用off解除单击事件
+            $("#btn2").click(function () {
+                //解除btn按钮的单击事件
+                $("#btn").off("click");
+
+                //如果不指定解绑的单击事件，会将组件上的事件全部解绑
+                $("#btn").off();
+            });
+
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="使用on绑定点击事件">
+<input id="btn2" type="button" value="使用off解绑点击事件">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window关闭方法</title>
+
+
+</head>
+<body>
+
+<input type="button" id="open" value="打开窗口">
+<input type="button" id="close" value="关闭窗口">
+
+<script>
+    //获取对象
+    var openBtn = document.getElementById("open");
+    var newWindow;
+
+    openBtn.onclick = function () {
+        //打开新窗口 ,返回一个新的window对象
+        newWindow = open("http://www.baidu.com");
+    }
+
+    var closeBut = document.getElementById("close");
+    closeBut.onclick = function () {
+        //关闭窗口 注意谁调用关谁
+        newWindow.close(); //默认浏览器窗口 代表的是当前窗口
+
+    }
+</script>
+</body>
+</html>

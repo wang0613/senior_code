@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <script>
+        //1.在页面加载完成后
+        $(function () {
+            //2.给username绑定失去焦点事件
+            $("#username").blur(function () {
+                //获取username文本输入矿值
+                var username = $(this).val();
+                //2.发送Ajax请求
+                $.get("findUserServlet",{username:username},function (data) {
+                    var span = $("#s_username");
+                    alert(data);
+                    //判断userExist是否是true
+                    if (data.userExist) {
+                        span.css("color","red");
+                        span.html(data.msg);
+                    }else {
+                        span.css("color","green");
+                        span.html(data.msg);
+                    }
+                },"json"); //指定接收的类型为json类型
+
+
+            });
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <form >
+        <input type="text" id="username" name="username" placeholder="请输入用户名">
+        <span id="s_username" ></span>
+        <br>
+        <input type="password" name="password" placeholder="请输入密码"> <br>
+        <input type="submit" value="注册"> <br>
+    </form>
+
+</body>
+</html>

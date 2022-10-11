@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>  <!--文档声明-->
+
+<!-- 引入dtd文档 ：外部引用  -->
+<!-- 本地：<!DOCTYPE 根标签名 SYSTEM "dtd文件的位置">  -->
+<!DOCTYPE students SYSTEM "student.dtd">
+
+<!--内部书写-->
+<!--<!DOCTYPE students [-->
+<!--        <!ELEMENT students (student+) >-->
+<!--        <!ELEMENT student (name,age,sex)>-->
+<!--        <!ELEMENT name (#PCDATA)>-->
+<!--        <!ELEMENT age (#PCDATA)>-->
+<!--        <!ELEMENT sex (#PCDATA)>-->
+<!--        <!ATTLIST student number ID #REQUIRED>-->
+<!--        ]>-->
+
+<students>
+
+    <student number="s007">
+        <name>旺财</name>
+        <age>8</age>
+        <sex>男</sex>
+    </student>
+
+    <student number="s008">
+        <name>旺财</name>
+        <age>8</age>
+        <sex>男</sex>
+    </student>
+
+</students>

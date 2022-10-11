@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据语法-遍历</title>
+    <script>
+
+        var person = {"name": "张三", age: 60, "gender": true};
+
+        var ps = [
+            {"name": "zhangsan", "age": 60, "gender": "男"},
+            {"name": "lsii", "age": 50, "gender": "男"},
+            {"name": "wang", "age": 30, "gender": "男"},
+        ];
+        //1.获取person中存在的键和值
+        //使用 for in 循环
+        for (var key in person) {
+            alert(key); //获取所有的键名
+            //注意key是字符串，无法通过字符串key拿到值
+            // alert(person.key);
+
+            //可以通过数组的方式
+            alert(person[key]);
+
+        };
+
+        alert("------------------------------------------")
+
+        //2.获取ps中的所有值 ,使用双层循环，遍历数组对象，拿对象，进行遍历
+        for (var i = 0; i < ps.length; i++) {
+            var p = ps[i]; //拿到第一个对象
+
+            for (var key in p) {
+                alert(key +":" + p[key])
+            }
+        };
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+host·····localhost:8080
+connection·····keep-alive
+upgrade-insecure-requests·····1
+user-agent·····Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+sec-fetch-dest·····document
+accept·····text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site·····none
+sec-fetch-mode·····navigate
+sec-fetch-user·····?1
+accept-encoding·····gzip, deflate, br
+accept-language·····zh-CN,zh;q=0.9
+cookie·····JSESSIONID=A6002E1C4D540C9A21122E814ACCF330; Webstorm-6192a51e=47a1f576-939b-4667-9b8c-ee89a406b0a9; Idea-b919fb8f=2cc1d14c-c7aa-43e0-9921-aba936dca578; Webstorm-80c937d6=0ae5f6a8-5788-4a2a-b703-b6bb7c3fa1cb

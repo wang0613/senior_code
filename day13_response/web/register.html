@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /**
+         * 分析:点击超链接，换一张图片，
+         *      1.给超链接和图片绑定单击事件
+         *      2.重新设置图片的src属性
+         */
+        window.onload = function () {
+            const img = document.getElementById("check");
+            img.onclick = function () {
+                //添加时间戳，避免浏览器缓存
+                var date = new Date().getTime();
+                img.src = "/day13_response/checkCodeServlet?"+date;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<img  id="check" src="/day13_response/checkCodeServlet">
+<a id="change" href="">看不清，换一张？</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例：轮播图</title>
+
+    <script>
+        var number = 1; //定义图片
+        //修改图片scr属性
+        function change() {
+            number++;
+            //判断number是否大于2
+            if (number > 2) {
+                number = 1; //还原操作
+            }
+            var img = document.getElementById("img");
+            img.src = "img/img" + number + ".jpg";
+
+        }
+
+        //定义定时器
+        setInterval(change, 2000);
+
+    </script>
+</head>
+<body>
+<img id="img" src="img/img1.jpg">
+
+</body>
+</html>

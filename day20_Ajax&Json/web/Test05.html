@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据语法</title>
+    <script>
+        //1.定义基本json格式
+        var person = {"name": "张三", age: 60, "gender": true}; //引号可有可无，单引双引都可以
+        // alert(person);
+        //2.嵌套格式 大括号{ }----->中括号【】
+        var persons = {
+            //数组
+            "person": [
+                {"name": "zhangsan", "age": 60, "gender": "男"},
+                {"name": "lsii", "age": 50, "gender": "男"},
+                {"name": "wang", "age": 30, "gender": "男"},
+            ]
+        };
+        //拿出王五的数据
+        var wang = persons.person[2].name;
+        alert(wang);
+
+        //3.中括号【】---->大括号{}
+        var ps = [
+            {"name": "zhangsan", "age": 60, "gender": "男"}, //数组中存放多个对象
+            {"name": "lsii", "age": 50, "gender": "男"},
+            {"name": "wang", "age": 30, "gender": "男"},
+        ];
+        //获取李四
+        alert(ps[1].name);
+        /**
+         * 获取数据:
+         1. json对象.键名
+         2. json对象["键名"]
+         3. 数组对象[索引]
+         4. 遍历
+         */
+
+        //获取name的值
+        alert(person.name);
+
+        var name = person["name"];
+        alert(name);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

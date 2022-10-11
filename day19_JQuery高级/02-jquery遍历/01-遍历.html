@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+
+    </script>
+    <script>
+        /**
+         * 遍历的三种方式
+         */
+        $(function () {
+            //获取所有ul下的li
+            var $city = $("#city li");
+
+            //1..使用js的方式
+            /* for (var i = 0; i < $city.length; i++) {
+                 //弹出获取内容
+                 alert(i + "  " + $city[i].innerHTML)
+             }*/
+
+            //2..jq对象.each(callback回调函数);
+          /*  $city.each(function (index, element) {
+                //1.使用this获取li对象
+                // alert(this.innerHTML);
+                alert($(this).html());
+
+                //2.第二种方式，在回调函数中定义参数 index:索引 element:元素对象
+                // alert(index + "：" + element.innerHTML)
+                //把元素对象转换为jq对象使用html方法
+                if("北京" == $(element).html()) {
+                    return false; // 相当于break true相当于continue
+                }
+                alert(index + "：" + $(element).html())
+            });*/
+
+            //3.第三种遍历方式 $.each(object, [callback])
+            // $.each($city,function () {
+            //     alert($(this).html());
+            // })
+
+            //4.第四种遍历方式 for  of
+            for (li of $city) {
+                alert($(li).html())
+
+            }
+
+        })
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>上海</li>
+    <li>北京</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>

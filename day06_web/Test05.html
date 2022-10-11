@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global全局对象</title>
+    <script>
+
+        /*
+        parseInt():将字符串转为数字
+			        * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+		isNaN():判断一个值是否是NaN
+			        * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+
+		eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
+         */
+        var str = " 传智播客";
+        var url = encodeURI(str); //url表编码 %20%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+        alert(url);
+
+        var code = decodeURI(url); //解码
+        alert(code); //传智播客
+
+        var str = "123";
+        var number = parseInt(str);
+        alert(number + 1); //124
+
+        var jscode = "alert(123)";
+        eval(jscode); //解析片段，执行123
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
